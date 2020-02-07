@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  first="";
   constructor() { }
 
   ngOnInit() {
+    this.first="naren@gmail.com";
   }
 
 }
