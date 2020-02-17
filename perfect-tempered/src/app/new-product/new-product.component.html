@@ -3,15 +3,16 @@
 	<div class="row block-1500">
 	<div class="col-md-4 order-md-last d-flex"></div>
           <div class="col-md-4 order-md-last d-flex">
-            <form action="#" class="bg-light p-5 contact-form"  #brand="ngForm" (submit)="onSubmit(brand)">
+            <form action="#" class="bg-light p-5 contact-form" #brand="ngForm" (submit)="onSubmit(brand)">
               <div class="form-group">
                 <input type="text" class="form-control" style="width: 260px;" placeholder="Name" name="productName" ngModel>
-              </div>
+            </div>
               <div class="form-group">
                     <span>Upload Photo</span>
                     <input type="file" id="file" style="width: 260px;" class="form-control" name="photo" placeholder="Upload Photo" 
                     (change)="handleFileInput($event.target.files)">
                   </div>
+
                   <div class="form-group">
                     <input type="text" name="rate" class="form-control" placeholder="Rate" ngModel>
                   </div>
@@ -20,7 +21,6 @@
                   </div>
                   <div class="form-group">
                         <select name="type" class="form-control" (change)="changeSuit($event)" ngModel>
-                                <option hidden [value]=""  selected>Select Type</option>
                                 <option value="1">Mobiles</option>
                                 <option value="2">Tempered Glass</option>
                                 <option value="3">Back cases</option>

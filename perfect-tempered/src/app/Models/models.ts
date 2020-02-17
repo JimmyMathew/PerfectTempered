@@ -1,7 +1,7 @@
 export class Product{
     productName:string;
     photo:File;
-    rate:number;
+    rate:string;
     desc:string;
     type:number;
     brand:Brand
