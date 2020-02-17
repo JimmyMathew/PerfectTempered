@@ -7,5 +7,7 @@ export class Product{
     brand:Brand
 }
 export class Brand{
+    brandId: number;
     brandName:string;
+
 }

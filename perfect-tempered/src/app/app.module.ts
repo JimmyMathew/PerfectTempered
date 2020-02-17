@@ -11,6 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { BrandComponent } from './brand/brand.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
+//Firebase section
+import {AngularFireModule} from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 const customNotifierOptions: NotifierOptions = {
   position: {
@@ -67,7 +71,9 @@ const customNotifierOptions: NotifierOptions = {
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NotifierModule.withConfig(customNotifierOptions)
+    NotifierModule.withConfig(customNotifierOptions),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
